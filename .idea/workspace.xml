@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -22,11 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e24854f-56cd-469c-a07a-465abf78e3f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crawlers/data5u.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crawlers/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ip_addr.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crawlers/ip3366.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crawlers/kuaidaili.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crawlers/xiladaili.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/data5u.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/data5u.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,18 +70,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/crawlers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/crawlers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/lib/crawlers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cargo.Run proxy_pool">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run proxy_pool" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package proxy_pool --bin proxy_pool" />
@@ -86,14 +102,48 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Test crawlers::ip3366::tests::test_ip3366" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package proxy_pool --bin proxy_pool crawlers::ip3366::tests::test_ip3366 -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test crawlers::tests::test_ip3366" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package proxy_pool --bin proxy_pool crawlers::tests::test_ip3366 -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test ip3366::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package proxy_pool --bin proxy_pool crawlers::ip3366::tests" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Run proxy_pool" />
+        <item itemvalue="Cargo.Test crawlers::tests::test_ip3366" />
+        <item itemvalue="Cargo.Test crawlers::ip3366::tests::test_ip3366" />
+        <item itemvalue="Cargo.Test ip3366::tests" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +161,8 @@
       <updated>1605540598802</updated>
       <workItem from="1605540599921" duration="2001000" />
       <workItem from="1605706162433" duration="704000" />
-      <workItem from="1605710223355" duration="6300000" />
+      <workItem from="1605710223355" duration="6452000" />
+      <workItem from="1605790186392" duration="8948000" />
     </task>
     <servers />
   </component>
@@ -134,6 +185,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="906" y="382" width="738" height="633" key="#Inspections" timestamp="1605791071114">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="906" y="382" width="738" height="633" key="#Inspections/0.0.2560.1440@0.0.2560.1440" timestamp="1605791071114" />
     <state x="1085" y="406" width="380" height="558" key="#com.intellij.ide.util.MemberChooser" timestamp="1605716390448">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -142,29 +197,49 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1646" y="450" width="530" height="497" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1605711414605" />
-    <state width="2516" height="738" key="GridCell.Tab.0.bottom" timestamp="1605716057593">
+    <state width="1218" height="737" key="GridCell.Tab.0.bottom" timestamp="1605800666970">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2516" height="738" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1605716057593" />
-    <state width="2516" height="738" key="GridCell.Tab.0.center" timestamp="1605716057591">
+    <state width="1218" height="737" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1605800666970" />
+    <state width="1218" height="737" key="GridCell.Tab.0.center" timestamp="1605800666968">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2516" height="738" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1605716057591" />
-    <state width="2516" height="738" key="GridCell.Tab.0.left" timestamp="1605716057590">
+    <state width="1218" height="737" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1605800666968" />
+    <state width="1218" height="737" key="GridCell.Tab.0.left" timestamp="1605800666967">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2516" height="738" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1605716057590" />
-    <state width="2516" height="738" key="GridCell.Tab.0.right" timestamp="1605716057592">
+    <state width="1218" height="737" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1605800666967" />
+    <state width="1218" height="737" key="GridCell.Tab.0.right" timestamp="1605800666969">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2516" height="738" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1605716057592" />
+    <state width="1218" height="737" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1605800666969" />
+    <state width="2516" height="508" key="GridCell.Tab.1.bottom" timestamp="1605794266410">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2516" height="508" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1605794266410" />
+    <state width="2516" height="508" key="GridCell.Tab.1.center" timestamp="1605794266410">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2516" height="508" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1605794266410" />
+    <state width="2516" height="508" key="GridCell.Tab.1.left" timestamp="1605794266410">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2516" height="508" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1605794266410" />
+    <state width="2516" height="508" key="GridCell.Tab.1.right" timestamp="1605794266410">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2516" height="508" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1605794266410" />
     <state x="774" y="337" key="SettingsEditor" timestamp="1605706180028">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="774" y="337" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1605706180028" />
-    <state x="1713" y="364" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605712883609">
+    <state x="1701" y="232" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605798624687">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1713" y="364" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605712883609" />
+    <state x="1701" y="232" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605798624687" />
+    <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup" timestamp="1605800658414">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1605800658414" />
   </component>
 </project>

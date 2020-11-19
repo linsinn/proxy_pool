@@ -3,36 +3,23 @@ use scraper::{Html, Selector};
 use crate::ip_addr::IpAddr;
 
 pub async fn crawl() -> Result<Vec<IpAddr>, anyhow::Error> {
-	let url = "https://www.kuaidaili.com/free/inha/";
-	let page = 5usize;
-	let mut ret = vec![];
-	for i in 1..=page {
-		let url = format!("{}{}", url, i);
-		let html = get_html(&url).await?;
-		match parse(&html) {
-			Ok(addrs) => ret.extend(addrs),
-			Err(e) => continue,
-		}
-	}
-	Ok(ret)
+	let url = "http://www.xiladaili.com/";
+	let html = get_html(&url).await?;
+	parse(&html)
 }
 
 fn parse(html: &String) -> Result<Vec<IpAddr>, anyhow::Error> {
 	let mut addrs = vec![];
 	let document = Html::parse_document(html);
-	let selector = Selector::parse("table tr").unwrap();
+	let selector = Selector::parse("table tbody tr td:first-child").unwrap();
 	for wl in  document.select(&selector) {
-		let selector = Selector::parse(r#"td[data-title="IP"]"#).unwrap();
-		let ip: String = match wl.select(&selector).next() {
-			Some(ip_node) => ip_node.text().collect(),
-			_ => continue,
-		};
-		let selector = Selector::parse(r#"td[data-title="PORT"]"#).unwrap();
-		let port: u32 = match wl.select(&selector).next() {
-			Some(port_node) => port_node.text().collect::<String>().parse::<u32>().unwrap(),
-			_ => continue,
-		};
-		addrs.push(IpAddr::new(ip, port));
+		if let Some(ip_port) =  wl.first_child().unwrap().value().as_text() {
+			let ip_port = ip_port.to_string();
+			let ip_port: Vec<&str> = ip_port.split(":").collect();
+			if ip_port.len() == 2 {
+				addrs.push(IpAddr::new(ip_port[0].to_string(), ip_port[1].parse().unwrap()));
+			}
+		}
 	}
 	Ok(addrs)
 }
