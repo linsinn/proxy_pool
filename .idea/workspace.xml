@@ -25,12 +25,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e24854f-56cd-469c-a07a-465abf78e3f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/storages/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storages/redis.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processors/getter.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processors/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processors/server.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/data5u.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/data5u.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/ip3366.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/ip3366.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/kuaidaili.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/kuaidaili.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crawlers/xiladaili.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/xiladaili.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ip_addr.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/proxy_addr.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storages/redis.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/storages/redis.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +89,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Cargo.Run proxy_pool">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run proxy_pool" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package proxy_pool --bin proxy_pool" />
@@ -141,11 +154,6 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Run proxy_pool" />
@@ -173,6 +181,7 @@
       <workItem from="1605710223355" duration="6452000" />
       <workItem from="1605790186392" duration="8948000" />
       <workItem from="1605873808251" duration="10659000" />
+      <workItem from="1605967551761" duration="6286000" />
     </task>
     <servers />
   </component>
@@ -199,10 +208,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="906" y="382" width="738" height="633" key="#Inspections/0.0.2560.1440@0.0.2560.1440" timestamp="1605791071114" />
-    <state x="1085" y="406" width="380" height="558" key="#com.intellij.ide.util.MemberChooser" timestamp="1605716390448">
+    <state x="1083" y="384" width="380" height="558" key="#com.intellij.ide.util.MemberChooser" timestamp="1605972422973">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1085" y="406" width="380" height="558" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605716390448" />
+    <state x="1083" y="384" width="380" height="558" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605972422973" />
     <state x="1646" y="450" width="530" height="497" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605711414605">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -243,10 +252,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="961" y="470" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1605884444523" />
-    <state x="1691" y="122" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605890533890">
+    <state x="1683" y="34" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605978153453">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1691" y="122" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605890533890" />
+    <state x="1683" y="34" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605978153453" />
     <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup" timestamp="1605800658414">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

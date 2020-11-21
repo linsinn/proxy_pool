@@ -1,8 +1,8 @@
 use crate::crawlers::get_html;
 use scraper::{Html, Selector};
-use crate::ip_addr::IpAddr;
+use crate::proxy_addr::ProxyAddr;
 
-pub async fn crawl() -> Result<Vec<IpAddr>, anyhow::Error> {
+pub async fn crawl() -> Result<Vec<ProxyAddr>, anyhow::Error> {
 	let url = "https://www.kuaidaili.com/free/inha/";
 	let page = 5usize;
 	let mut ret = vec![];
@@ -17,7 +17,7 @@ pub async fn crawl() -> Result<Vec<IpAddr>, anyhow::Error> {
 	Ok(ret)
 }
 
-fn parse(html: &String) -> Result<Vec<IpAddr>, anyhow::Error> {
+fn parse(html: &String) -> Result<Vec<ProxyAddr>, anyhow::Error> {
 	let mut addrs = vec![];
 	let document = Html::parse_document(html);
 	let selector = Selector::parse("table tr").unwrap();
@@ -32,7 +32,7 @@ fn parse(html: &String) -> Result<Vec<IpAddr>, anyhow::Error> {
 			Some(port_node) => port_node.text().collect::<String>().parse::<u32>().unwrap(),
 			_ => continue,
 		};
-		addrs.push(IpAddr::new(ip, port));
+		addrs.push(ProxyAddr::new(ip, port));
 	}
 	Ok(addrs)
 }

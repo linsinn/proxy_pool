@@ -1,19 +1,10 @@
 use reqwest::header::{HeaderMap, HeaderValue};
-use crate::ip_addr::IpAddr;
+use crate::proxy_addr::ProxyAddr;
 
-mod data5u;
-mod ip3366;
-mod kuaidaili;
-mod xiladaili;
-
-pub async fn get_proxies() -> Vec<IpAddr> {
-	let mut proxies = vec![];
-	proxies.extend(data5u::crawl().await.unwrap_or_else(|_| vec![]));
-	proxies.extend(ip3366::crawl().await.unwrap_or_else(|_| vec![]));
-	proxies.extend(kuaidaili::crawl().await.unwrap_or_else(|_| vec![]));
-	proxies.extend(xiladaili::crawl().await.unwrap_or_else(|_| vec![]));
-	proxies
-}
+pub mod data5u;
+pub mod ip3366;
+pub mod kuaidaili;
+pub mod xiladaili;
 
 fn build_headers() -> HeaderMap {
 	let mut header_map = HeaderMap::new();

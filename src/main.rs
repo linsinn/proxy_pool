@@ -1,14 +1,12 @@
 mod crawlers;
-mod ip_addr;
+mod proxy_addr;
 mod storages;
+mod processors;
 
 use crate::crawlers::*;
 
-#[tokio::main]
+#[actix_web::main]
 async fn main() -> Result<(), anyhow::Error> {
-	let proxies = get_proxies().await;
-	for proxy in proxies {
-		storages::redis::add(proxy);
-	}
+	processors::server::run().await;
 	Ok(())
 }
