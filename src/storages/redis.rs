@@ -5,6 +5,7 @@ use r2d2::Pool;
 use once_cell::sync::Lazy;
 use std::panic::resume_unwind;
 use std::str::FromStr;
+use std::net::IpAddr;
 
 const REDIS_KEY: &str = "proxies";
 
@@ -73,8 +74,26 @@ pub fn decrease_score(proxy: ProxyAddr) {
 	}
 }
 
+pub fn max_score(proxy: ProxyAddr) {
+	let pool = REDIS_POOL.clone();
+	let mut conn = pool.get().unwrap();
+	redis::cmd("zadd")
+		.arg(REDIS_KEY)
+		.arg(100)
+		.arg(proxy.to_string())
+		.execute(conn.deref_mut());
+}
+
 pub fn count() -> u32 {
 	let pool = REDIS_POOL.clone();
 	let mut conn = pool.get().unwrap();
 	redis::cmd("zcard").arg(REDIS_KEY).query(conn.deref_mut()).unwrap()
+}
+
+pub fn batch(cursor: u32, count: u32) -> (u32, Vec<ProxyAddr>) {
+	let pool = REDIS_POOL.clone();
+	let mut conn = pool.get().unwrap();
+	let (cursor, proxies) = redis::cmd("zscan").arg(REDIS_KEY).arg(cursor).arg("count").arg(count).query::<(u32, Vec<(String, String)>)>(conn.deref_mut()).unwrap();
+	let proxies :Vec<ProxyAddr> = proxies.into_iter().map(|s| ProxyAddr::from_str(&s.0).unwrap()).collect();
+	(cursor, proxies)
 }

@@ -7,6 +7,7 @@ use crate::crawlers::*;
 
 #[actix_web::main]
 async fn main() -> Result<(), anyhow::Error> {
-	processors::server::run().await;
+	processors::getter::run().await;
+	processors::tester::run().await;
 	Ok(())
 }

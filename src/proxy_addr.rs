@@ -1,6 +1,7 @@
 use std::fmt::{self, Display, Formatter, Debug};
 use std::str::FromStr;
 
+#[derive(Clone, PartialEq)]
 pub struct ProxyAddr {
 	ip: String,
 	port: u32,

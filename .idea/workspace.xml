@@ -25,19 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e24854f-56cd-469c-a07a-465abf78e3f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/processors/getter.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/processors/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/processors/server.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processors/tester.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawlers/data5u.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/data5u.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawlers/ip3366.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/ip3366.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawlers/kuaidaili.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/kuaidaili.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crawlers/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawlers/xiladaili.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawlers/xiladaili.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ip_addr.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/proxy_addr.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processors/getter.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/processors/getter.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processors/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/processors/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proxy_addr.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/proxy_addr.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storages/redis.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/storages/redis.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,11 +85,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Cargo.Run proxy_pool">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run proxy_pool" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package proxy_pool --bin proxy_pool" />
@@ -182,6 +173,9 @@
       <workItem from="1605790186392" duration="8948000" />
       <workItem from="1605873808251" duration="10659000" />
       <workItem from="1605967551761" duration="6286000" />
+      <workItem from="1606013533974" duration="697000" />
+      <workItem from="1606014238920" duration="4495000" />
+      <workItem from="1606021296023" duration="5971000" />
     </task>
     <servers />
   </component>
@@ -208,14 +202,18 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="906" y="382" width="738" height="633" key="#Inspections/0.0.2560.1440@0.0.2560.1440" timestamp="1605791071114" />
+    <state x="1631" y="502" width="560" height="394" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606014184447">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1631" y="502" width="560" height="394" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1606014184447" />
     <state x="1083" y="384" width="380" height="558" key="#com.intellij.ide.util.MemberChooser" timestamp="1605972422973">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1083" y="384" width="380" height="558" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605972422973" />
-    <state x="1646" y="450" width="530" height="497" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605711414605">
+    <state x="1644" y="428" width="530" height="497" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606014944139">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1646" y="450" width="530" height="497" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1605711414605" />
+    <state x="1644" y="428" width="530" height="497" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1606014944139" />
     <state width="1220" height="541" key="GridCell.Tab.0.bottom" timestamp="1605888052447">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -252,13 +250,17 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="961" y="470" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1605884444523" />
-    <state x="1683" y="34" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605978153453">
+    <state x="1673" y="-76" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606020892456">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1683" y="34" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1605978153453" />
-    <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup" timestamp="1605800658414">
+    <state x="1673" y="-76" width="392" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1606020892456" />
+    <state x="975" y="456" width="610" height="536" key="find.popup" timestamp="1606014628062">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1605800658414" />
+    <state x="975" y="456" width="610" height="536" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1606014628062" />
+    <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup" timestamp="1606020748604">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1579" y="340" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1606020748604" />
   </component>
 </project>

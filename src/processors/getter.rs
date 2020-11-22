@@ -8,7 +8,7 @@ fn is_full() -> bool {
 	storages::redis::count() >= MAX_PROXY_NUMBER
 }
 
-async fn run() {
+pub async fn run() {
 	let mut proxies = vec![];
 	if !is_full() {
 		proxies.extend(data5u::crawl().await.unwrap_or_else(|_| vec![]));
